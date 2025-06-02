@@ -28,7 +28,8 @@ public class NegativeStoreTests extends StoreTestBase {
                 Arguments.of(new FaultyOrderDto(randomSmallInt(), randomPositiveInt(), randomPositiveInt(), "Tomorrow", "placed", randomBoolean())),
                 Arguments.of(new FaultyOrderDto(randomSmallInt(), randomPositiveInt(), randomPositiveInt(), date, 2+2, randomBoolean())),
                 Arguments.of(new FaultyOrderDto(randomSmallInt(), randomPositiveInt(), randomPositiveInt(), date, false, randomBoolean())),
-                Arguments.of(new FaultyOrderDto(randomSmallInt(), randomPositiveInt(), randomPositiveInt(), date, "placed", "maybe?"))
+                Arguments.of(new FaultyOrderDto(randomSmallInt(), randomPositiveInt(), randomPositiveInt(), date, "placed", "maybe?")),
+                Arguments.of(new FaultyOrderDto())
         );
     }
 
