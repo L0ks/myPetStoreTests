@@ -37,11 +37,6 @@ public class RequestExecutor {
         return builder.build().toUri();
     }
 
-    private <T, B> T exchange(URI uri, HttpMethod httpMethod, HttpEntity<B> entity, ParameterizedTypeReference<T> responseType) {
-        logger.info("Executing " + httpMethod + " request to: " + uri);
-        return restTemplate.exchange(uri, httpMethod, entity, responseType).getBody();
-    }
-
     private <T, B> ResponseEntity<T> executeRequest(
             HttpMethod method,
             String endpoint,
@@ -54,7 +49,7 @@ public class RequestExecutor {
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        HttpEntity<B> entity = (body != null) ? new HttpEntity<>(body, headers) : (HttpEntity<B>) HttpEntity.EMPTY;
+        HttpEntity<B> entity = (body != null) ? new HttpEntity<>(body, headers) : emptyEntity();
 
         try {
             return restTemplate.exchange(uri, method, entity, responseType);
@@ -80,6 +75,11 @@ public class RequestExecutor {
     public <T> ResponseEntity<T> executeRequest(HttpMethod method, String endpointTemplate, Object pathParam, ParameterizedTypeReference<T> responseType) {
         String endpoint = endpointTemplate.replace("{param}", pathParam.toString());
         return executeRequest(method, endpoint, null, Collections.emptyMap(), responseType);
+    }
+
+    @SuppressWarnings("unchecked")
+    public static <T> HttpEntity<T> emptyEntity() {
+        return (HttpEntity<T>) HttpEntity.EMPTY;
     }
 
 }
