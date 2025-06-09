@@ -1,4 +1,4 @@
-package my.petstore;
+package my.petstore.client;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -25,5 +25,4 @@ public class ClientData {
         this.hostProperties = ConfigFactory.create(HostProperties.class);
         this.baseUrl = hostProperties.baseUrl();
     }
-
 }

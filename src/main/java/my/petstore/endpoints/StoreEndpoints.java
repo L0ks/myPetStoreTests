@@ -1,4 +1,4 @@
-package my.petstore.enums;
+package my.petstore.endpoints;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

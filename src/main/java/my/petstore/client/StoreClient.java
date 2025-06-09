@@ -1,7 +1,8 @@
-package my.petstore;
+package my.petstore.client;
 
-import my.petstore.enums.StoreEndpoints;
-import my.petstore.util.OrderDto;
+import my.petstore.dto.OrderDto;
+import my.petstore.endpoints.StoreEndpoints;
+import my.petstore.executor.RequestExecutor;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;

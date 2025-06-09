@@ -1,4 +1,4 @@
-package my.petstore.util;
+package my.petstore.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
@@ -6,17 +6,17 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderDto {
+public class FaultyOrderDto {
     @JsonProperty("id")
-    private int id;
+    private Object id;
     @JsonProperty("petId")
-    private long petId;
+    private Object petId;
     @JsonProperty("quantity")
-    private int quantity;
+    private Object quantity;
     @JsonProperty("shipDate")
-    private String shipDate;
+    private Object shipDate;
     @JsonProperty("status")
-    private String status;
+    private Object status;
     @JsonProperty("complete")
-    private boolean complete;
+    private Object complete;
 }

@@ -1,8 +1,9 @@
 package my.petstore;
 
 import lombok.SneakyThrows;
-import my.petstore.enums.StoreEndpoints;
-import my.petstore.util.FaultyOrderDto;
+import my.petstore.endpoints.StoreEndpoints;
+import my.petstore.executor.RequestExecutor;
+import my.petstore.dto.FaultyOrderDto;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
