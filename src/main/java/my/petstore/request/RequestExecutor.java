@@ -1,6 +1,6 @@
-package my.petstore.executor;
+package my.petstore.request;
 
-import my.petstore.client.ClientData;
+import my.petstore.data.StoreClientData;
 import org.apache.log4j.Logger;
 import org.apache.log4j.LogManager;
 import org.springframework.core.ParameterizedTypeReference;
@@ -19,7 +19,7 @@ import java.util.Map;
 public class RequestExecutor {
     private static final Logger logger = LogManager.getLogger(RequestExecutor.class);
     private final RestTemplate restTemplate;
-    ClientData clientData = new ClientData();
+    StoreClientData storeClientData = new StoreClientData();
 
     public RequestExecutor() {
         HttpComponentsClientHttpRequestFactory factory = new HttpComponentsClientHttpRequestFactory();
@@ -30,7 +30,7 @@ public class RequestExecutor {
 
     private URI createUri(String endpoint, Map<String, List<?>> queryparams) {
         UriComponentsBuilder builder = UriComponentsBuilder
-                .fromUri(URI.create(clientData.getBaseUrl()))
+                .fromUri(URI.create(storeClientData.getBaseUrl()))
                 .pathSegment(endpoint);
 
         queryparams.forEach(builder::queryParam);

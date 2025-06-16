@@ -1,15 +1,15 @@
-package my.petstore.client;
+package my.petstore.clients;
 
 import my.petstore.dto.OrderDto;
 import my.petstore.endpoints.StoreEndpoints;
-import my.petstore.executor.RequestExecutor;
+import my.petstore.request.RequestExecutor;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 
 import java.util.Map;
 
-public class StoreClient {
+public class StoreClient implements StoreClientInterface {
     RequestExecutor requestExecutor = new RequestExecutor();
 
     public ResponseEntity<Map<String, Integer>> getPetInventories() {

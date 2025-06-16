@@ -19,6 +19,4 @@ public class OrderDto {
     private String status;
     @JsonProperty("complete")
     private boolean complete;
-
-
 }

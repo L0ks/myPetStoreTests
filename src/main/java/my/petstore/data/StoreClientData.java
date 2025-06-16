@@ -1,11 +1,11 @@
-package my.petstore.client;
+package my.petstore.data;
 
 import lombok.Getter;
 import lombok.Setter;
 import org.aeonbits.owner.ConfigFactory;
 import my.petstore.config.HostProperties;
 
-public class ClientData {
+public class StoreClientData {
     private final HostProperties hostProperties;
 
     @Getter
@@ -20,7 +20,7 @@ public class ClientData {
         return System.getProperty("env").toLowerCase();
     }
 
-    public ClientData() {
+    public StoreClientData() {
         this.environment = setEnvironment();
         this.hostProperties = ConfigFactory.create(HostProperties.class);
         this.baseUrl = hostProperties.baseUrl();

@@ -1,6 +1,6 @@
 package my.petstore;
 
-import my.petstore.client.StoreClient;
+import my.petstore.clients.StoreClient;
 
 import java.time.OffsetDateTime;
 import java.time.ZoneId;

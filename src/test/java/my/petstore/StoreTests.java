@@ -14,11 +14,7 @@ import org.springframework.http.ResponseEntity;
 import java.util.Map;
 import java.util.stream.Stream;
 
-/**
- * Unit test for simple App.
- */
 public class StoreTests extends StoreTestBase {
-
 
     static Stream<Arguments> orderDtoValidArgumentsStream() {
         return Stream.of(

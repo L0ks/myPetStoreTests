@@ -2,7 +2,7 @@ package my.petstore;
 
 import lombok.SneakyThrows;
 import my.petstore.endpoints.StoreEndpoints;
-import my.petstore.executor.RequestExecutor;
+import my.petstore.request.RequestExecutor;
 import my.petstore.dto.FaultyOrderDto;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Tag;
@@ -81,8 +81,4 @@ public class NegativeStoreTests extends StoreTestBase {
         ResponseEntity<Void> response = requestExecutor.executeRequest(HttpMethod.DELETE, StoreEndpoints.DELETEORDER.getEndpoint(), invalidID, new ParameterizedTypeReference<Void>() {});
         Assertions.assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode(), "Failed to place pet order");
     }
-
-
-
-
 }
