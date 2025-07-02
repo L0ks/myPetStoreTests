@@ -1,6 +1,7 @@
-package my.petstore;
+package my.petstore.api;
 
 import lombok.SneakyThrows;
+import my.petstore.api.base.StoreTestBase;
 import my.petstore.endpoints.StoreEndpoints;
 import my.petstore.request.RequestExecutor;
 import my.petstore.dto.FaultyOrderDto;
