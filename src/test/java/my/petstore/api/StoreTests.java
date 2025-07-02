@@ -1,6 +1,7 @@
-package my.petstore;
+package my.petstore.api;
 
 import lombok.SneakyThrows;
+import my.petstore.api.base.StoreTestBase;
 import my.petstore.dto.OrderDto;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Tag;

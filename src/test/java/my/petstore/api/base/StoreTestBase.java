@@ -1,4 +1,4 @@
-package my.petstore;
+package my.petstore.api.base;
 
 import my.petstore.clients.StoreClient;
 
