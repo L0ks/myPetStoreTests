@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @AllArgsConstructor
 public enum StoreEndpoints {
-    INTENTORY("store/inventory"),
+    INVENTORY("store/inventory"),
     PLACEORDER("store/order"),
     CHECKORDER("store/order/{param}"),
     DELETEORDER("store/order/{param}");

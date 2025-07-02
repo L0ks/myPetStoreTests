@@ -13,7 +13,7 @@ public class StoreClient implements StoreClientInterface {
     RequestExecutor requestExecutor = new RequestExecutor();
 
     public ResponseEntity<Map<String, Integer>> getPetInventories() {
-        return requestExecutor.executeRequest(StoreEndpoints.INTENTORY.getEndpoint(), new ParameterizedTypeReference<Map<String, Integer>>() {});
+        return requestExecutor.executeRequest(StoreEndpoints.INVENTORY.getEndpoint(), new ParameterizedTypeReference<Map<String, Integer>>() {});
     }
 
     public ResponseEntity<OrderDto> placePetOrder(OrderDto dto) {
